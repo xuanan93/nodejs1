@@ -1,5 +1,5 @@
 pipeline {
-    agent master
+    agent node
     //  {
     //     docker {
     //         image 'node:12.22.10-slim'
@@ -16,6 +16,7 @@ pipeline {
                 }
             }
         stage('Build') {
+          agent { node {label 'master'}}
             steps {
                 sh 'npm install'
             }
