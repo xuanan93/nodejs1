@@ -1,14 +1,20 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:6-alpine'
-            args '-p 3000:3000'
-        }
+    agent none
+    //  {
+    //     docker {
+    //         image 'node:12.22.10-slim'
+    //         args '-p 3000:3000'
+    //     }
     }
      environment {
             CI = 'true'
         }
     stages {
+        stage('Cloning our Git') {
+                steps {
+                git 'https://github.com/xuanan93/nodejs1.git'
+                }
+            }
         stage('Build') {
             steps {
                 sh 'npm install'
