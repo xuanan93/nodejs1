@@ -10,6 +10,7 @@ pipeline {
             CI = 'true'
         }
     stages {
+      agent { node {label 'master'}}
         stage('Cloning our Git') {
                 steps {
                 git 'https://github.com/xuanan93/nodejs1.git'
