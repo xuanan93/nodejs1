@@ -20,6 +20,7 @@ pipeline {
         stage('Build') {
           agent { node {label 'master'}}
             steps {
+              echo "hello"
                 //sh 'npm install'
             }
         }
