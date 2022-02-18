@@ -5,7 +5,7 @@ pipeline {
     //         image 'node:12.22.10-slim'
     //         args '-p 3000:3000'
     //     }
-    }
+    //}
      environment {
             CI = 'true'
         }
