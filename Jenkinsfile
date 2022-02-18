@@ -19,9 +19,9 @@ pipeline {
             }
         stage('Build') {
           agent { node {label 'master'}}
-            // steps {
-            //     sh 'npm install'
-            // }
+            steps {
+                //sh 'npm install'
+            }
         }
         // stage('Test') {
         //             steps {
