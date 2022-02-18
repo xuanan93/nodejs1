@@ -17,12 +17,12 @@ pipeline {
                 git 'https://github.com/xuanan93/nodejs1.git'
                 }
             }
-        stage('Build') {
-          agent { node {label 'master'}}
-            steps {
-                sh 'npm install'
-            }
-        }
+        // stage('Build') {
+        //   agent { node {label 'master'}}
+        //     steps {
+        //         sh 'npm install'
+        //     }
+        // }
         // stage('Test') {
         //             steps {
         //                 sh './jenkins/scripts/test.sh'
