@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent master
     //  {
     //     docker {
     //         image 'node:12.22.10-slim'
